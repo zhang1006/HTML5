@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#mycanvas{
+				border: 1px solid #000;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="mycanvas"></canvas>
+		<script type="text/javascript">
+			var c=document.getElementById("mycanvas");
+			c.width=600;
+			c.height=600;
+			var ctx=c.getContext("2d");
+			ctx.font="20px Georgia";
+			ctx.fillText("Hello World!",10,50);
+			ctx.font="30px Verdana"
+			var gradient=ctx.createLinearGradient(0,0,c.width,0);
+			gradient.addColorStop("0","magenta");
+			gradient.addColorStop("0.5","blue");
+			gradient.addColorStop("1.0","red");
+			ctx.fillStyle=gradient;
+			ctx.strokeStyle=gradient;
+			var text="hello world";
+			var mtext=ctx.measureText(text);
+			ctx.strokeText("234567890",20,150);
+			ctx.fillText("text",20,250);
+			ctx.fillText(mtext.width,20,300);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<canvas id="mycanvas"></canvas>
+		<script type="text/javascript">
+			var c=document.getElementById("mycanvas");
+			c.width=600;
+			c.height=600;
+			var ctx=c.getContext("2d");
+			var img=new Image();
+			img.onload=function(){
+				ctx.drawImage(img,0,0);
+				ctx.drawImage(img,30,40,140,180,0,240,140,180);
+			}
+			img.src="img/3.jpg"
+		</script>
+	</body>
+</html>
