@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div.sky{
+            width: 40%;
+            height: 100%;
+            position: absolute;
+            left: 20%;
+            top: 70%; 
+        }
+        li{
+            margin: 0 auto;
+            list-style: none;
+        }
+        a{
+            position: relative;
+        }
+        img{
+            
+            left: 50%;
+            position: absolute;
+            transition: all 0.6s;
+            transform-origin: right top; 
+        }
+        div.sky:hover ul li:first-child img{
+            transform: rotate(60deg);
+        }
+        div.sky:hover ul li:nth-child(2) img{
+            transform: rotate(120deg);
+        }
+        div.sky:hover ul li:nth-child(3) img{
+            transform: rotate(180deg);
+        }
+        div.sky:hover ul li:nth-child(4) img{
+            transform: rotate(240deg);
+        }
+        div.sky:hover ul li:nth-child(5) img{
+            transform: rotate(300deg);
+        }
+        div.sky:hover ul li:nth-child(6) img{
+            transform: rotate(360deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sky">
+        <ul>
+            <li><a href="#"><img src="imgs/1.jpg" alt=""></a></li>
+            <li><a href="#"><img src="imgs/3.jpg" alt=""></a></li>
+            <li><a href="#"><img src="imgs/5.jpg" alt=""></a></li>
+            <li><a href="#"><img src="imgs/4.jpg" alt=""></a></li>
+            <li><a href="#"><img src="imgs/6.jpg" alt=""></a></li>
+            <li><a href="#"><img src="imgs/2.jpg" alt=""></a></li>
+        </ul>
+    </div>
+</body>
+
+</html>

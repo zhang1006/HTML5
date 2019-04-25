@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            width: 100%;
+            height: 100%;
+            background-color: #009BAB;
+            overflow: hidden;
+        }
+        img{
+            width: 100%;
+            height: auto;
+            left: 0;
+            bottom: 0;
+            position: absolute;
+            animation: water 1.8s .2s infinite;
+        }
+        img:last-child{
+            animation: water 2s  infinite ;
+        }
+        .sun{
+            width: 310px;
+            height: 210px;
+            /* background-color: pink; */
+            position: relative;
+        }
+        .sun::before,.sun::after{
+            content: "";
+            width: 50px;
+            height: 50px;
+            background-color: rgba(255, 255, 255, .5);
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            animation: sun 2.2s infinite;
+        }
+        .sun::after{
+            width: 80px;
+            height: 80px;
+            animation: sun 1.8s infinite;
+        }
+        @keyframes water{
+            0%{
+                bottom: 0px;
+            }
+            50%{
+                bottom: -40px;
+            }
+            100%{
+                bottom: 0px;
+            }
+        }
+        @keyframes sun{
+            0%{
+                transform: translate(-50%,-50%) scale(1);
+                box-shadow:0px 0px 16px rgba(255, 255, 255, 0.7);
+            }
+            50%{
+                transform: translate(-50%,-50%) scale(1.2);
+                box-shadow:0px 0px 50px rgba(255, 255, 255, 0.7);
+            }
+            100%{
+                transform: translate(-50%,-50%) scale(1);
+                box-shadow:0px 0px 16px rgba(255, 255, 255, 0.7);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="sun"></div>
+        <img src="img/1.png" alt="">
+        <img src="img/2.png" alt="">
+    </div>
+</body>
+
+</html>
